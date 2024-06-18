@@ -113,17 +113,6 @@ function App() {
         />
       )}
 
-      {/* {!isStartTimer && (
-        <div className="input_box">
-          <input id="hr" placeholder="HH" onChange={handleInput}></input>
-          <input id="min" placeholder="MM" onChange={handleInput}></input>
-          <input id="sec" placeholder="SS" onChange={handleInput}></input>
-          <button id="startButton" onClick={handleStartTimer}>
-            Start Timer
-          </button>
-        </div>
-      )} */}
-
       {isStartTimer && (
         <ShowTimer
           hr={hr}
@@ -135,29 +124,6 @@ function App() {
           handleReset={handleReset}
         />
       )}
-
-      {/* {isStartTimer && (
-        <div className="showTimer">
-          <div id="h">{hr < 10 ? `0${hr}` : hr}</div>
-          <span>:</span>
-          <div id="m">{min < 10 ? `0${min}` : min}</div>
-          <span>:</span>
-          <div id="s">{sec < 10 ? `0${sec}` : sec}</div>
-          {!isPaused && (
-            <button id="pauseButton" onClick={handlePauseTimer}>
-              Pause
-            </button>
-          )}
-          {isPaused && (
-            <button id="resumeButton" onClick={handleResumeTimer}>
-              Resume
-            </button>
-          )}
-          <button id="resetButton" onClick={handleReset}>
-            Reset
-          </button>
-        </div>
-      )} */}
     </>
   );
 }
